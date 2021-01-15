@@ -1,0 +1,20 @@
+.main {
+  max-width: var(--defaultContentWidth);
+  margin: 0 auto;
+  padding: 50px 25px;
+}
+
+body {
+  background-color: var(--lightBlue);
+}
+
+.main__splash {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "logo"
+    "tagline"
+    "joinBtn"
+    "getBtn"
+    ;
+  gap: 25px;
+}
