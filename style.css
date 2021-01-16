@@ -1,5 +1,6 @@
 .main {
   max-width: var(--defaultContentWidth);
+  max-height: var(--defaultContentHeight);
   margin: 0 auto;
   padding: 50px 25px;
 }
@@ -21,12 +22,15 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 0.17fr 1fr 1fr;
+  align-items: stretch;
   gap: 0px 0px;
+  justify-items: center;
   grid-template-areas:
-    ". . . ."
-    ". Center Center ."
+    "login . . Noteberry"
+    ". . Center ."
     ". . . .";
 }
 .Center { grid-area: Center; }
+.login { grid-area: login; }
