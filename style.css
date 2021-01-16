@@ -18,3 +18,15 @@ body {
     ;
   gap: 25px;
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.17fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . . ."
+    ". Center Center ."
+    ". . . .";
+}
+.Center { grid-area: Center; }
