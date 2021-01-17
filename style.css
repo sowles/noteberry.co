@@ -1,9 +1,12 @@
+:root {
+  --lightBlue: #dde0f4;
+}
+
 .main {
   max-width: var(--defaultContentWidth);
   max-height: var(--defaultContentHeight);
   margin: 0 auto;
   padding: 0;
-  background-color: blue;
 }
 
 body {
