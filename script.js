@@ -18,6 +18,7 @@ document.querySelector("#loginBtn").addEventListener("click", () => {
       // The signed-in user info.
       var user = result.user;
       // ...
+      window.location = "notes.html";
     }).catch((error) => {
       // Handle Errors here.
       var errorCode = error.code;
