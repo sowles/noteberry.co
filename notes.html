@@ -11,10 +11,11 @@
     <script defer src="https://www.gstatic.com/firebasejs/7.19/firebase-auth.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/7.19/firebase-firestore.js"></script>
     <script defer src="firebase.js"></script>
+    <script defer src="notes.js"></script>
   </head>
 
   <body>
-    <header>
+    <header class = "notesContainerHeader">
       <span>Noteberry</span>
       <button id = "logout">Logout</button>
     </header>
@@ -24,9 +25,10 @@
       </section>
 
       <section class = "note">
-        <h1>Our fun note</h1>
-        <textarea placeholder="Write here"></textarea>
-
+        <section class = "note__wrapper">
+          <h1>Our fun note</h1>
+          <textarea placeholder="Write here"></textarea>
+        </section>
       </section>
     </main>
 
