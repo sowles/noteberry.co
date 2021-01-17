@@ -3,6 +3,7 @@
   max-height: var(--defaultContentHeight);
   margin: 0 auto;
   padding: 0;
+  background-color: blue;
 }
 
 body {
