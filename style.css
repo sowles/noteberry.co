@@ -2,7 +2,7 @@
   max-width: var(--defaultContentWidth);
   max-height: var(--defaultContentHeight);
   margin: 0 auto;
-  padding: 50px 25px;
+  padding: 0;
 }
 
 body {
@@ -28,9 +28,10 @@ body {
   gap: 0px 0px;
   justify-items: center;
   grid-template-areas:
-    "login . . Noteberry"
-    ". . Center ."
-    ". . . .";
+    "login . Noteberry . ."
+    ". . Center . ."
+    ". . . . .";
 }
 .Center { grid-area: Center; }
 .login { grid-area: login; }
+.Noteberry { grid-area: Noteberry }
