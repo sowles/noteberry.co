@@ -1,5 +1,6 @@
 :root {
-  --lightBlue: #dde0f4;
+  --lightBlue: #84CEEB; /*body*/
+  --darkBlue: #5680E9; /*Header*/
 }
 
 .main {
@@ -11,6 +12,10 @@
 
 body {
   background-color: var(--lightBlue);
+}
+
+.header{
+  background-color: var(--darkBlue);
 }
 
 .main__splash {
@@ -26,6 +31,7 @@ body {
 
 .grid-container {
   display: grid;
+  background-color: var(--darkBlue);
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 0.17fr 1fr 1fr;
   align-items: stretch;
