@@ -28,6 +28,9 @@ async function loadNotes(){
   firebaseDB.collection("notes").where("user", "==", userID)
     .onSnapshot((notes) => {
       // fill up the sidebar
+      while (sidebar.firstChild) {
+        sidebar.removeChild(sidebar.firstChild);
+      }
       notes.forEach((note) => {
         const button = document.createElement("button");
         button.textContent = note.data()["title"];
