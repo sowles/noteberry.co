@@ -1,6 +1,8 @@
 let firebaseDB;
 let userID;
 const sidebar = document.querySelector("#notesSidebar__list");
+const noteTitleField = document.querySelector("#noteTitle");
+const noteBodyField = document.querySelector("#noteBody");
 
 document.querySelector("#makeNewNote").addEventListener("click", () => {
   const noteId = createNote();
@@ -41,6 +43,21 @@ async function loadNotes(){
         sidebar.appendChild(button);
       });
     });
+}
+
+async function displayNote(noteID) {
+  // fetch the note, set the text fields equal to the note, pass through id to save
+
+  firebaseDB.collection("notes").doc(noteID).get()
+    .onSnapshot((note) => {
+      noteTitleField.value = note.data()["title"];
+      noteBodyField.value = note.data()["body"];
+    });
+  }
+  catch(error){
+    alert(`Error: ${error}`);
+    return 0;
+  }
 }
 
 async function createNote() {
