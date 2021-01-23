@@ -70,6 +70,10 @@ body {
   position: sticky;
 }
 
+#notesSidebar__list {
+  display: items;
+}
+
 .makeNewNote {
   padding: 25px;
   height: 40px;
