@@ -46,7 +46,7 @@ async function createNote() {
       title: "Untitled",
       body: "",
       timestamp: Date.now(),
-      user: user
+      user: userID
     });
     return note.id;
   }
