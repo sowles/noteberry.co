@@ -1,6 +1,15 @@
 let firebaseDB;
 let user;
-let sidebar = document.querySelector(".notesSidebar");
+const sidebar = document.querySelector(".notesSidebar");
+
+document.querySelector("#makeNewNote").addEventListener("click", () => {
+  const noteId = createNote();
+  if (noteId > 0) {
+    displayNote(noteId);
+  }
+})
+
+
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
@@ -33,14 +42,16 @@ async function loadNotes(){
 
 async function createNote() {
   try {
-    await firebaseDB.collection("notes").add({
+    const note = await firebaseDB.collection("notes").add({
       title: "Untitled",
       body: "",
       timestamp: Date.now(),
       user: user
     });
+    return note.id;
   }
   catch(error) {
     alert(`Error: ${error}`);
+    return 0;
   }
 }
