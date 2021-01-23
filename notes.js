@@ -1,5 +1,5 @@
 let firebaseDB;
-let user;
+let userID;
 const sidebar = document.querySelector(".notesSidebar");
 
 document.querySelector("#makeNewNote").addEventListener("click", () => {
@@ -14,7 +14,7 @@ document.querySelector("#makeNewNote").addEventListener("click", () => {
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     firebaseDB = firebase.firestore();
-    user = user.uid;
+    userID = user.uid;
     loadNotes();
   }
   else {
@@ -25,7 +25,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 async function loadNotes(){
   // implement later
   let notes;
-  firebaseDB.collection("notes").where("user", "==", user)
+  firebaseDB.collection("notes").where("user", "==", userID)
     .onSnapshot((notes) => {
       // fill up the sidebar
       notes.forEach((note) => {
