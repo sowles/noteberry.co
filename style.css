@@ -68,10 +68,12 @@ body {
   row-gap: 25px;
   height: calc(100vh - 70px);
   position: sticky;
+  grid-auto-rows: max-content;
+
 }
 
 #notesSidebar__list {
-  display: items;
+  display: contents;
 }
 
 .makeNewNote {
