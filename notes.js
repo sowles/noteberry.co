@@ -52,10 +52,40 @@ async function displayNote(noteID) {
       while (noteWrapper.firstChild) {
         noteWrapper.removeChild(noteWrapper.firstChild);
       }
+      const noteTitleInput = document.createElement("input");
+      noteTitleInput.id = "noteTitle";
+      noteTitleInput.placeholder = "Untitled";
+      noteTitleInput.addEventListener("change", (el) = {
+        saveNote(noteID);
+      });
+      noteWrapper.appendChild(noteTitleInput);
+      noteTitleInput.value = note.data()["title"]);
 
+      const noteBodyInput = document.createElement("textarea");
+      noteBodyInput.id = "noteBody";
+      noteBodyInput.placeholder = "Write here";
+      noteBodyInput.addEventListener("change", (el) = {
+        saveNote(noteID);
+      });
+      noteWrapper.appendChild(noteBodyInput);
+      noteBodyInput.value = note.data()["body"]);
 
-    })
+    });
 }
+
+async function saveNote(noteID) {
+  try {
+    await firebaseDB.collection("notes").doc(noteID).set({
+      title: document.querySelector("#noteTitle").value,
+      body: document.querySelector("#noteBody").value,
+      timestamp: Date.now()
+    });
+  }
+  catch(error) {
+    alert(`Error: ${error}`);
+  }
+}
+
 
 async function createNote() {
   try {
