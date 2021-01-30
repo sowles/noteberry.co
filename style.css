@@ -73,7 +73,7 @@ body {
 
 .notesSidebar {
   grid-area: sidebar;
-  padding: 25px;
+  padding: 25px 0;
   display: grid;
   grid-template-columns: 1fr;
   height: calc(100vh - 70px);
@@ -87,7 +87,7 @@ body {
 }
 
 .notesSidebar__noteEntry {
-  padding: 10px;
+  padding: 10px 25px;
   color: rgba(255, 255, 255, 0.8);
   text-align: left;
   font-size: 1em;
