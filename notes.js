@@ -39,7 +39,7 @@ async function loadNotes(){
           displayNote(note.id);
         });
         button.classList.add("notesSidebar__noteEntry");
-        button.data.noteID = note.id;
+        button.dataset.noteID = note.id;
         sidebar.appendChild(button);
       });
     });
