@@ -59,7 +59,7 @@ async function displayNote(noteID) {
         saveNote(noteID);
       });
       noteWrapper.appendChild(noteTitleInput);
-      noteTitleInput.value = note.data()["title"]);
+      noteTitleInput.value = note.data()["title"];
 
       const noteBodyInput = document.createElement("textarea");
       noteBodyInput.id = "noteBody";
@@ -68,7 +68,7 @@ async function displayNote(noteID) {
         saveNote(noteID);
       });
       noteWrapper.appendChild(noteBodyInput);
-      noteBodyInput.value = note.data()["body"]);
+      noteBodyInput.value = note.data()["body"];
 
     });
 }
