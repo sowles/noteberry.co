@@ -55,7 +55,7 @@ async function displayNote(noteID) {
       const noteTitleInput = document.createElement("input");
       noteTitleInput.id = "noteTitle";
       noteTitleInput.placeholder = "Untitled";
-      noteTitleInput.addEventListener("change", (el) = {
+      noteTitleInput.addEventListener("change", (el) => {
         saveNote(noteID);
       });
       noteWrapper.appendChild(noteTitleInput);
@@ -64,7 +64,7 @@ async function displayNote(noteID) {
       const noteBodyInput = document.createElement("textarea");
       noteBodyInput.id = "noteBody";
       noteBodyInput.placeholder = "Write here";
-      noteBodyInput.addEventListener("change", (el) = {
+      noteBodyInput.addEventListener("change", (el) => {
         saveNote(noteID);
       });
       noteWrapper.appendChild(noteBodyInput);
