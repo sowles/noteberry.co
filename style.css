@@ -3,6 +3,17 @@
   --darkBlue: #5680E9; /*Header*/
 }
 
+* {
+   margin: 0;
+  padding: 0;
+  border: 0;
+  line-height: 1.6;
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+}
+
 .main {
   max-width: var(--defaultContentWidth);
   max-height: var(--defaultContentHeight);
@@ -65,15 +76,19 @@ body {
   padding: 25px;
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 25px;
   height: calc(100vh - 70px);
   position: sticky;
   grid-auto-rows: max-content;
-
+  background-color: rgb(17, 40, 63);
 }
 
 #notesSidebar__list {
   display: contents;
+}
+
+.notesSidebar__noteEntry {
+  padding: 10px 25px;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .makeNewNote {
