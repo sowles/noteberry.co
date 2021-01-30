@@ -1,7 +1,7 @@
 let firebaseDB;
 let userID;
 const sidebar = document.querySelector("#notesSidebar__list");
-const noteWrapper = document.querySelector(".noteWrapper");
+const noteWrapper = document.querySelector(".note__wrapper");
 
 document.querySelector("#makeNewNote").addEventListener("click", () => {
   const noteId = createNote();
