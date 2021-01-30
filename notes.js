@@ -75,7 +75,7 @@ async function displayNote(noteID) {
 
 async function saveNote(noteID) {
   try {
-    await firebaseDB.collection("notes").doc(noteID).set({
+    await firebaseDB.collection("notes").doc(noteID).update({
       title: document.querySelector("#noteTitle").value,
       body: document.querySelector("#noteBody").value,
       timestamp: Date.now()
