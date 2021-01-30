@@ -1,8 +1,7 @@
 let firebaseDB;
 let userID;
 const sidebar = document.querySelector("#notesSidebar__list");
-const noteTitleField = document.querySelector("#noteTitle");
-const noteBodyField = document.querySelector("#noteBody");
+const noteWrapper = document.querySelector(".noteWrapper");
 
 document.querySelector("#makeNewNote").addEventListener("click", () => {
   const noteId = createNote();
@@ -50,14 +49,12 @@ async function displayNote(noteID) {
 
   firebaseDB.collection("notes").doc(noteID).get()
     .onSnapshot((note) => {
-      noteTitleField.value = note.data()["title"];
-      noteBodyField.value = note.data()["body"];
-    });
-  }
-  catch(error){
-    alert(`Error: ${error}`);
-    return 0;
-  }
+      while (noteWrapper.firstChild) {
+        noteWrapper.removeChild(noteWrapper.firstChild);
+      }
+
+
+    })
 }
 
 async function createNote() {
