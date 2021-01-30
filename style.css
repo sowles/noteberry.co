@@ -89,6 +89,14 @@ body {
 .notesSidebar__noteEntry {
   padding: 10px 25px;
   color: rgba(255, 255, 255, 0.8);
+  text-align: left;
+  font-size: 1em;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.notesSidebar__noteEntry:hover, .notesSidebar__noteEntry:focus {
+  background: transparent;
 }
 
 .makeNewNote {
