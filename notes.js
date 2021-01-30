@@ -47,7 +47,7 @@ async function loadNotes(){
 async function displayNote(noteID) {
   // fetch the note, set the text fields equal to the note, pass through id to save
 
-  firebaseDB.collection("notes").doc(noteID).get()
+  firebaseDB.collection("notes").doc(noteID)
     .onSnapshot((note) => {
       while (noteWrapper.firstChild) {
         noteWrapper.removeChild(noteWrapper.firstChild);
