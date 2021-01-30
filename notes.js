@@ -39,13 +39,17 @@ async function loadNotes(){
           displayNote(note.id);
         });
         button.classList.add("notesSidebar__noteEntry");
+        button.data.noteID = note.id;
         sidebar.appendChild(button);
       });
     });
 }
 
 async function displayNote(noteID) {
-  // fetch the note, set the text fields equal to the note, pass through id to save
+  sidebar.childNodes.forEach((el) => {
+    el.classList.remove("notesSidebar__noteEntry--currentNote");
+  });
+  sidebar.querySelector("button[data-noteID=" + noteID + "]").classList.add("notesSidebar__noteEntry--currentNote");
 
   firebaseDB.collection("notes").doc(noteID)
     .onSnapshot((note) => {

@@ -96,8 +96,16 @@ body {
   background: transparent;
 }
 
-.notesSidebar__noteEntry:hover, .notesSidebar__noteEntry:focus {
-  background: transparent;
+.notesSidebar__noteEntry:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.notesSidebar__noteEntry:active {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.notesSidebar__noteEntry--currentNote {
+  color: rgb(100, 181, 246);
 }
 
 .makeNewNote {
