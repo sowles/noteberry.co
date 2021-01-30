@@ -49,7 +49,7 @@ async function displayNote(noteID) {
   sidebar.childNodes.forEach((el) => {
     el.classList.remove("notesSidebar__noteEntry--currentNote");
   });
-  sidebar.querySelector("button[data-noteID=" + noteID + "]").classList.add("notesSidebar__noteEntry--currentNote");
+  sidebar.querySelector("button[data-note-i-d=" + noteID + "]").classList.add("notesSidebar__noteEntry--currentNote");
 
   firebaseDB.collection("notes").doc(noteID)
     .onSnapshot((note) => {
