@@ -57,7 +57,7 @@ async function displayNote(noteID) {
         noteWrapper.removeChild(noteWrapper.firstChild);
       }
       const deleteButton = document.createElement("button");
-      deleteButton.textContent = "X";
+      deleteButton.textContent = "🗑️";
       deleteButton.addEventListener("click", (el) => {
         deleteNote(noteID);
 
