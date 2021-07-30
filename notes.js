@@ -56,6 +56,13 @@ async function displayNote(noteID) {
       while (noteWrapper.firstChild) {
         noteWrapper.removeChild(noteWrapper.firstChild);
       }
+      const deleteButton = document.createElement("button");
+      deleteButton.textContent = "X";
+      deleteButton.addEventListener("click", (el) => {
+        deleteNote(noteID);
+
+      });
+      noteWrapper.appendChild(deleteButton);
       const noteTitleInput = document.createElement("input");
       noteTitleInput.id = "noteTitle";
       noteTitleInput.placeholder = "Untitled";
@@ -100,6 +107,18 @@ async function createNote() {
       user: userID
     });
     return note.id;
+  }
+  catch(error) {
+    alert(`Error: ${error}`);
+    return 0;
+  }
+
+
+}
+
+async function deleteNote(noteID){
+  try {
+    await firebaseDB.collection("notes").doc(noteID).delete();
   }
   catch(error) {
     alert(`Error: ${error}`);
