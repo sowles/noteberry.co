@@ -119,6 +119,9 @@ async function createNote() {
 async function deleteNote(noteID){
   try {
     await firebaseDB.collection("notes").doc(noteID).delete();
+    while (noteWrapper.firstChild) {
+      noteWrapper.removeChild(noteWrapper.firstChild);
+    }
   }
   catch(error) {
     alert(`Error: ${error}`);
