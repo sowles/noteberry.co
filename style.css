@@ -45,17 +45,19 @@ body {
   padding: 40px;
   gap: 10px;
   background-color: var(--darkBlue);
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 30% 20% 50%;
+  grid-template-columns: 1fr 1fr 5fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 15fr 1fr;
   align-items: stretch;
 
+
   justify-items: center;
-  grid-template-areas:
-    "login . Noteberry . ."
-    ". . Center . ."
-    ". . . . .";
+grid-template-areas:
+  "login . Noteberry . ."
+  ". . Center . ."
+  ". . lowerCenter . .";
 }
 .Center { grid-area: Center; }
+.lowerCenter { grid-area: lowerCenter; }
 .login { grid-area: login; }
 .Noteberry { grid-area: Noteberry }
 
