@@ -26,7 +26,14 @@ body {
 }
 
 .header{
-  background-color: var(--darkBlue);
+
+  padding: 0px;
+  text-align: center;
+  background: var(--darkBlue);
+  color: white;
+  font-size: 30px;
+
+  /* background-color: var(--darkBlue); */
 }
 
 .main__splash {
@@ -40,11 +47,20 @@ body {
   gap: 25px;
 }
 
+.head-grid {
+  display: grid;
+  padding: 0px;
+  text-align: center;
+  background: var(--darkBlue);
+  color: white;
+  font-size: 30px;
+}
+
 .grid-container {
   display: grid;
   padding: 40px;
   gap: 10px;
-  background-color: var(--darkBlue);
+  background-color: var(--lightBlue);
   grid-template-columns: 1fr 1fr 5fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 15fr 1fr;
   align-items: stretch;
