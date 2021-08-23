@@ -49,6 +49,9 @@ body {
 
 .head-grid {
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "hLogo . hLogin . hSettings"
+
   padding: 0px;
   text-align: center;
   background: var(--darkBlue);
