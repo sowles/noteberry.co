@@ -49,8 +49,8 @@ body {
 
 .head-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-areas: "hLogo . hLogin . hSettings"
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "hLogo . hLogin ."
 
   padding: 0px;
   text-align: center;
@@ -158,4 +158,11 @@ grid-template-areas:
   resize: none;
   min-height: 400px;
   outline: none;
+}
+
+.logButton {
+  vertical-align: middle;
+  font-size: 20px;
+  border-radius: 6px;
+  background-color: var(--lightBlue);
 }
