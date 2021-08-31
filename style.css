@@ -104,6 +104,7 @@ grid-template-areas:
   grid-auto-rows: max-content;
   background-color: rgb(17, 40, 63);
   overflow: auto;
+  border-radius: 6px;
 
 }
 
@@ -158,6 +159,8 @@ grid-template-areas:
   resize: none;
   min-height: 400px;
   outline: none;
+  border-radius: 0px 10px 10px 10px;
+  padding-left: 10px;
 }
 
 .logButton {
