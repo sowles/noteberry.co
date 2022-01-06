@@ -10,6 +10,9 @@ document.querySelector("#makeNewNote").addEventListener("click", () => {
   }
 })
 
+// async (function to add folder, button onlcick call makenewfolder
+//createnote can be copied and instread of adding it to the notes collection add it to the folders collection
+// All id need to modify within createFolder instead of saying replace title with name and get rid of body. change collection to folders
 
 
 firebase.auth().onAuthStateChanged(function(user) {
@@ -107,6 +110,24 @@ async function createNote() {
       user: userID
     });
     return note.id;
+  }
+  catch(error) {
+    alert(`Error: ${error}`);
+    return 0;
+  }
+
+
+}
+
+//add folder implementation
+async function createFolder() {
+  try {
+    const note = await firebaseDB.collection("Folder").add({
+      name: "Untitled",
+      timestamp: Date.now(),
+      user: userID
+    });
+    return Folder.id;
   }
   catch(error) {
     alert(`Error: ${error}`);
