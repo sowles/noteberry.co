@@ -129,12 +129,12 @@ async function createNote() {
 //add folder implementation
 async function createFolder() {
   try {
-    const note = await firebaseDB.collection("Folder").add({
+    const note = await firebaseDB.collection("folder").add({
       name: "Untitled",
       timestamp: Date.now(),
       user: userID
     });
-    return Folder.id;
+    return folder.id;
   }
   catch(error) {
     alert(`Error: ${error}`);
