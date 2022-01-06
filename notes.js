@@ -10,6 +10,13 @@ document.querySelector("#makeNewNote").addEventListener("click", () => {
   }
 })
 
+document.querySelector("#makeNewFolder").addEventListener("click", () => {
+  const folderId = createFolder();
+  if (folderId > 0) {
+  //  displayNote(folId);
+  }
+})
+
 // async (function to add folder, button onlcick call makenewfolder
 //createnote can be copied and instread of adding it to the notes collection add it to the folders collection
 // All id need to modify within createFolder instead of saying replace title with name and get rid of body. change collection to folders
